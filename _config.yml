@@ -1,0 +1,113 @@
+# Site settings
+title:                      Ivan's Git
+SEOTitle:                   Ivan | Git
+header-img:                 img/home-bg.jpg
+email:                      ivancristina5@gmail.com
+description:                "Simulator Technician. Doing IT just when I have to"
+keyword:                    "ivan, ivanc, ivancristina, IvanCristina, @ivancristina, Ivan Cristina"
+url:                        "https://ivancristina.github.io/" # your host, for absolute URL
+baseurl:                    ""                            # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future:                     true
+
+# SNS settings
+RSS:                        false
+github_username:            ivancristina
+twitter_username:           ivan_cristin
+instagram_username:         nbahkp
+linkedin_username:          ivan-cristina-368489168
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude:
+  [
+    "less",
+    "node_modules",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
+    "README.it.md",
+  ]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Disqus settings
+disqus_username:            ivancristina-github-io
+
+# Analytics settings
+# Google Analytics
+ga_track_id:                'UA-99985915-2'               # Format: UA-xxxxxx-xx
+ga_domain:                  ivancristina.github.io
+
+# Sidebar settings
+sidebar:                    true                          # whether or not using Sidebar.
+sidebar-about-description:  "Italian mate in love with Metal Birds ✈️ and Domotics 🏠"
+sidebar-avatar:             /img/avatar-ivan.jpg          # use absolute URL, seeing it's used in both `/` and `/about/`
+
+# Featured Tags
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+# Related
+friends: [
+    {
+        title:              "Github",
+        href:               "https://github.com/ivancristina"
+    },{
+        title:              "CAE",
+        href:               "https://www.cae.com"
+    },{
+        title:              "SEAS",
+        href:               "https://www.seas-italy.it"
+    },{
+        title:              "Ryanair",
+        href:               "https://corporate.ryanair.com"
+    },{
+        title:              "easyJet",
+        href:               "https://corporate.easyjet.com"
+    },{
+        title:              "Accent",
+        href:               "https://ivancristina.github.io/repo/depiction/web/com.ivanc.accent.html"
+    },{
+        title:              "MoreRAM",
+        href:               "https://ivancristina.github.io/moreram/"
+    },{
+        title:              "JactiveLTEam",
+        href:               "https://jactivelteam.github.io"
+    },{
+        title:              "Neumorphic",
+        href:               "https://ivancristina.github.io/neumorphic/"
+    }
+]

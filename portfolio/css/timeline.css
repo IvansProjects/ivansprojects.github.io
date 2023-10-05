@@ -1,0 +1,669 @@
+/*
+*  Timeline.css
+*/
+
+@font-face {
+
+  font-family: "Inter";
+  // font-weight: 400;
+  src: url("/fonts/Inter-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  // font-weight: 600;
+  src: url("/fonts/Inter-SemiBold.woff");
+  font-weight: bold;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fefefe;
+  background: linear-gradient(90deg, #fefefe, #f6fbfb);
+  font-family: "Inter";
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+.gradient {
+  color: #161618; /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 0.0)!important;
+  background: linear-gradient(-60deg, #904e95, #904e95, #e73c7e, #ee7752);
+  background-size: 400% 400%;
+  animation: flow 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: trasparent;
+}
+
+@keyframes flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.main, .container>header {
+  width: 90%;
+  max-width: 69em;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #343434;
+  /* Fancy Gray Gradient */
+  /*background-image: -webkit-linear-gradient(92deg, #343434, #858585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;*/
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: .5rem!important;
+}
+
+h5 {
+  font-size: 14px;
+  margin-top: 0px!important;
+  font-weight: 600;
+}
+
+/* Made with http://icomoon.io/ */
+.cbp_tmtimeline {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: -120px;
+}
+
+.cbp_tmtimeline>li {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* The date/time */
+.cbp_tmlabel time {
+  font-size: 1.0em;
+  position: absolute;
+  top: 0px;
+  line-height: 64px;
+  right: 5px;
+  margin-right: 1em;
+  color: #a5a7aa;
+}
+
+/* The Duoshuo */
+.cbp_tmlabel .comment {
+  padding: 0 1.5em 0.5em;
+}
+
+/* The card */
+.cbp_tmtimeline>li .cbp_tmlabel {
+  background: white;
+  color: rgb(78, 78, 78);
+  /* line-height: 1.4; */
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #edeeee;
+  margin: 0 0 30px 0;
+  font-weight: 400;
+  font-size: 95%;
+}
+
+.cbp_tmtimeline>li .cbp_tmlabel h2 {
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 15px;
+  padding: 14px 20px;
+  margin: 0;
+  height: 64px;
+  line-height: 36px;
+}
+
+.cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
+  border-right-color: #FFFFFF;
+  display: no;
+}
+
+/* The icons */
+.cbp_tmtimeline>li .cbp_tmicon {
+  width: 40px;
+  height: 40px;
+  font-family: 'Inter';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.4em;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  color: #fff;
+  background: #46a4da;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #afdcf8;
+  text-align: center;
+  left: 20%;
+  top: 0;
+  margin: 0 0 0 -25px;
+}
+
+.cbp_tmicon-phone:before {
+  content: "\e004";
+  font-family: 'Inter';
+}
+
+.cbp_tmicon-screen:before {
+  content: "\e005";
+  font-family: 'Inter';
+}
+
+.cbp_tmicon-html:before {
+  content: "\e001";
+  font-family: 'Inter';
+}
+
+.cbp_tmicon-video:before {
+  content: "\e002";
+  font-family: 'Inter';
+}
+
+.cbp_tmicon-font:before {
+  content: "\e003";
+  font-family: 'Inter';
+}
+
+/** Venders Logo **/
+
+.i-icon:before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-size: 60%!important;
+}
+
+.i-pdf:before{background:url("../images/PDF.png") 50% 50% no-repeat;}
+.i-seas:before{background:url("../images/SEAS.png") 50% 50% no-repeat;}
+.i-ryanair:before{background:url("../images/RyanAir.png") 50% 50% no-repeat;}
+.i-easyjet:before{background:url("../images/easyJet.png") 50% 50% no-repeat;}
+.i-cae:before{background:url("../images/CAE.png") 50% 50% no-repeat;}
+.i-google:before{background:url("../images/Google.png") 50% 50% no-repeat;}
+.i-iab:before{background:url("../images/iab.png") 50% 50% no-repeat;}
+.i-ferrarin:before{background:url("../images/Ferrarin.png") 50% 50% no-repeat;}
+.i-tea:before{background:url("../images/TEA Circle.png") 50% 50% no-repeat;}
+.i-tea-plain:before{background:url("../images/TEA.png") 50% 50% no-repeat;}
+.i-cambridge:before{background:url("../images/Cambridge.png") 50% 50% no-repeat;}
+.i-eipass:before{background:url("../images/Eipass.png") 50% 50% no-repeat;}
+.i-miur:before{background:url("../images/MIUR.png") 50% 50% no-repeat;}
+.i-verga:before{background:url("../images/Verga.png") 50% 50% no-repeat;}
+.i-xda:before{background:url("../images/XDA.png") 50% 50% no-repeat;}
+.i-android:before{background:url("../images/Android.png") 50% 50% no-repeat;}
+
+/******* Hux Branch *****/
+/* navbar - dark mode */
+.navbar-custom .nav li a,
+.navbar-custom .nav li a:hover,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover {
+  color: #777;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #777;
+}
+
+html {
+  font-size: 90%;
+}
+
+header {
+  min-width: 100%;
+  padding: 5em 0px;
+  padding-bottom: 10em;
+  position: relative;
+  border-bottom: 1px solid #edeeee;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+header p {
+  text-align: center;
+  color: #252728;
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 1.7em;
+}
+
+.cbp_tmlabel .hux_ul {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cbp_tmlabel .hux_ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img.icon {
+  border-radius: 22, 37%;
+  filter: drop-shadow(6px 6px 5px #cccccc)
+}
+
+.shadow {
+  filter: drop-shadow(6px 6px 5px #cccccc)
+}
+
+.icons img {
+  width: 175px;
+  height: 175px;
+  border-radius: 24%;
+}
+
+.icons a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+/*Now we will create fish-eye shapes using pseudo elements and clip them to add a curve to the sides of the icons*/
+.icons a:before, .icons a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+  /*circle*/
+  /*time to transform the circle into fish-eye shape. iOS7 style now.*/
+  -webkit-transform: scaleX(2) scaleY(1.05);
+  transform: scaleX(2) scaleY(1.05);
+  /*clipping the left and right sides - 17px from the left and right*/
+  clip: rect(0, 66px, 100px, 34px);
+  /*pushing it behind the icon*/
+  z-index: -1;
+}
+
+/*duplicating the :before element and rotating it 90deg and swapping the X/Y transforms*/
+.icons a:after {
+  -webkit-transform: scaleY(2) scaleX(1.05) rotate(90deg);
+}
+
+.cbp_tmlabel img.album {
+  width: 100%;
+  margin-bottom: 1em;
+  border-top: 1px solid #eeefef;
+  border-bottom: 1px solid #eeefef;
+}
+
+.cbp_tmlabel img.logo {
+  height: 40px;
+  margin-bottom: 1em;
+}
+
+.cbp_tmlabel p {
+  padding: 1em 0;
+  /*text-indent: 2em;*/
+  margin: 0 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cbp_tmlabel ul {
+  padding: 0em 0;
+  margin: 0 1.5em;
+  list-style: none;
+}
+
+.cbp_tmlabel ul li {
+  padding: 0.5em 0;
+}
+
+.cbp_tmlabel ul li.skill {
+  overflow: auto;
+  margin-top: 9px;
+  border-top: 1px solid #eeefef;
+}
+
+.cbp_tmlabel ul li.skill>span,
+.cbp_tmlabel ul li.skill>a {
+  display: inline-block;
+  float: left;
+  font-size: 1.3rem;
+  width: auto;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+  color: #a5a7aa;
+  transition: all 0.3s ease;
+}
+
+.cbp_tmlabel ul li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.cbp_tmlabel ul li.skill>span:nth-child(1) {
+  margin-left: 0px;
+}
+
+.cbp_tmlabel ul li.skill span:before {
+  line-height: 40px;
+}
+
+.cbp_tmlabel ul li.skill span.link {
+  float: right;
+  font-size: 0.8em;
+  line-height: 30px;
+  width: auto;
+  padding: 0 11px;
+  min-width: 70px;
+  box-sizing: border-box;
+  height: 32px;
+  border-radius: 3px;
+  background: white;
+  border: 1px solid #D5D6D8;
+  margin: 4px 0px 0px 5px;
+}
+
+.cbp_tmlabel ul li.skill span.link:hover,
+.cbp_tmlabel ul li.skill span.link:active {
+  background: #eee;
+}
+
+.cbp_tmlabel ul li.skill span.link a {
+  color: #a5a7aa;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  /*reset before*/
+  background: none !important;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+  .main {
+    padding-bottom: 0px;
+  }
+
+  html {
+    font-size: 90%;
+  }
+
+  header p {
+    font-size: 1.05em;
+    letter-spacing: 0px;
+    margin: 1.5em;
+  }
+
+  .cbp_tmlabel ul li.skill>span, .cbp_tmlabel ul li.skill>a {
+    margin-right: 2px;
+  }
+}
+
+/* iOS 13 & macOS Mojave Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body, html {
+    background: #161618;
+  }
+
+  a {
+    color: #1C1C1E;
+  }
+
+  a:hover {
+    color: #3785F7!important
+  }
+
+  header {
+    border-bottom: 1px solid #ebeeee48!important;
+  }
+
+  header h1 {
+    color: white;
+  }
+
+  h2, h3, h4, h5
+  {
+    color: white;
+  }
+
+  .cbp_tmtimeline>li .cbp_tmlabel {
+    background: #1C1C1E!important;
+    color: white!important;
+    border: 1px solid #ebeeee48!important;
+  }
+
+  .cbp_tmtimeline,
+  .cbp_tmlabel, {
+    color: white!important;
+  }
+
+  .cbp_tmlabel img.album {
+    border-top: 1px solid black!important;
+    border-bottom: 1px solid black!important;
+  }
+
+  span.link {
+    background: #535353!important;
+    border: 1px solid #ebeeee48!important;
+  }
+
+  span.link:hover {
+    background: #383838!important;
+  }
+
+  span.link a {
+    color: white!important;
+  }
+
+  .cbp_tmlabel ul li.skill {
+    border-top: 1px solid #ebeeee48!important;
+  }
+
+  .cbp_tmlabel ul li.skill>span {
+    color: white!important;
+  }
+
+  .navbar-brand,
+  .nav li a {
+    color: white!important;
+  }
+
+  .navbar-custom.is-fixed {
+    border-color: #ebeeee48!important;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: white!important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .navbar-collapse {
+      box-shadow: rgba(255,255,255,.117647) 0 1px 6px,rgba(255,255,255,.239216) 0 1px 4px !important
+    }
+  }
+
+  .shadow {
+    filter: drop-shadow(6px 6px 5px #ebeeee48)!important
+  }
+
+  #CVimg {
+    content:url("/portfolio/images/CV Dark.png");
+  }
+
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 7.5s;
+  -webkit-animation: fadeIn 7.5s;
+  -moz-animation: fadeIn 7.5s;
+  -o-animation: fadeIn 7.5s;
+  -ms-animation: fadeIn 7.5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Circle Animation*/
+
+.circle-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.outer-circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(180deg, rgba(255,197,20,1) 0%, rgba(245,152,134,1) 39%, rgba(255,0,224,1) 100%);
+  border-radius: 50%;
+  animation: rotate 2.5s linear infinite;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+}
+
+.outer-circle:hover {
+  transform: scale(1.1);
+  transition: transform 1.5s ease;
+  -webkit-transition: transform 1.5s ease;
+}
+
+.outer-circle span {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(180deg, rgba(255,197,20,1) 0%, rgba(245,152,134,1) 39%, rgba(255,0,224,1) 100%);
+  border-radius: 50%;
+}
+
+.outer-circle span:nth-child(1) {
+  filter: blur(5px);
+}
+
+.outer-circle span:nth-child(2) {
+  filter: blur(10px);
+}
+
+.outer-circle span:nth-child(3) {
+  filter: blur(25px);
+}
+
+.outer-circle span:nth-child(4) {
+  filter: blur(150px);
+}
+
+.inner-circle {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background-image: url("/portfolio/images/Avatar.jpg");
+  background-size: contain;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  animation: balance 2.5s linear infinite;
+  -moz-box-shadow:    inset 0 0 15px #161618;
+  -webkit-box-shadow: inset 0 0 15px #161618;
+  box-shadow:         inset 0 0 15px #161618;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* Balances Inner Circle Hue Rotation, which is impossible not to inherit from Outer as parent */
+@keyframes balance {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(-30deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50% {transform: scale(1);} 
+  40% {transform: scale(1.15);}
+  60% {transform: scale(1.125);}
+  80%, 100% {transform: scale(1.1);} 
+}
