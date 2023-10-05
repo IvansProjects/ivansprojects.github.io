@@ -1,0 +1,168 @@
+/*!
+ * Ivan's Git v1.0.1 (http://ivancristina.github.io)
+ * based on Hux Blog v1.7.0 (http://huxpro.github.io)
+ * Copyright 2018 Hux <huxpro@gmail.com>
+ */
+
+ @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff");
+    font-weight: normal;
+    }
+  @font-face {
+      font-family: "Inter";
+      font-weight: 700;
+      src: url("../fonts/Inter-SemiBold.woff");
+    }
+  /* iOS 13 & macOS Mojave Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    body, html {
+      background: #161618;
+      color: white!important;
+    }
+  
+    h2, h3, h4, h5
+    {
+      color: white;
+    }
+  
+    hr {
+      border-top: 1px solid #ebeeee48!important;
+    }
+  
+    span.link {
+      background: #535353!important;
+      border: 1px solid #ebeeee48!important;
+    }
+  
+    span.link:hover {
+      background: #383838!important;
+    }
+  
+    span.link a {
+      color: white!important;
+    }
+  
+    .navbar-brand,
+    .nav li a {
+      color: white!important;
+    }
+  
+    .navbar-custom.is-fixed {
+      border-color: #ebeeee48!important;
+      background-color: #161618!important;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      .navbar-collapse {
+        background-color: #161618!important;
+        box-shadow: rgba(255,255,255,.117647) 0 1px 6px,rgba(255,255,255,.239216) 0 1px 4px !important
+      }
+    }
+  
+    .highlighter-rouge,
+    .highlight pre {
+      color: white!important;
+    }
+  
+    blockquote {
+      border-left: 5px solid #ebeeee48!important
+    }
+  
+    code {
+      background-color: #ebeeee48!important;
+    }
+  
+    .listing-seperator {
+      color: #3785F7!important
+    }
+  
+    select {
+      background: #161618!important;
+    }
+  
+    .pager li > a {
+      color: white!important;
+      background-color: #1C1C1E!important;
+      border: 1px solid #ebeeee48!important;
+    }
+  
+    .pager li > a:hover {
+      background-color: #383838!important;
+      border: 1px solid #ebeeee48!important;
+    }
+  
+    #tag_cloud .tag {
+      color: white!important;
+      background: #1C1C1E!important;
+      box-shadow: rgba(255, 255, 255, 0.117647) 0 1px 6px, rgba(255, 255, 255, 0.239216) 0 1px 4px !important
+    }
+  
+    .highlight .c1 {
+      color: #33FF00!important;
+    }
+  
+    .highlight .c {
+      color: #33FF00!important;
+    }
+  
+  }
+  /*! Ivan was here */
+  .roundrect {
+    border-radius: 10px;
+    }
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a3a3a3;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
