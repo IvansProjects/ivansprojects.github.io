@@ -5,7 +5,7 @@ header-img:                 img/home-bg.jpg
 email:                      ivancristina5@gmail.com
 description:                "Simulator Technician. Doing IT just when I have to"
 keyword:                    "ivan, ivanc, ivancristina, IvanCristina, @ivancristina, Ivan Cristina"
-url:                        "https://ivancristina.github.io/" # your host, for absolute URL
+url:                        "https://ivansprojects.github.io/" # your host, for absolute URL
 baseurl:                    ""                            # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
